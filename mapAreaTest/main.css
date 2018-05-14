@@ -1,0 +1,61 @@
+img {
+  width: 400px;
+  position: absolute;
+  top: 1px;
+  opacity: 0;
+  transition: opacity 0.2s ease-in;  
+}
+
+img#mainbg {
+  position: relative;
+  z-index: 99;
+  opacity: 0.8;
+  top: 0;
+}
+
+area {
+  outline: none;
+}
+
+#zoomAvatar {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0);
+  top: 0;
+  width: 200px;
+  height: 200px;
+  z-index: -1;
+}
+
+.tooltip {
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  max-width: 100px;
+  position: absolute;
+  top: 0;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.2s ease-in;
+  z-index: 100;  
+}
+
+.tooltip * {
+  font-size: 0.3em;
+  border: 0;
+  outline: none;
+}
+
+.tooltip::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: rgba(0, 0, 0, 0.5) transparent transparent transparent;
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>map area test</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" media="screen" href="./main.css" />
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="crossorigin="anonymous"></script>
+  <script src="./zoomooz/jquery.zoomooz.min.js"></script>
+</head>
+<body>
+
+<div style="min-width: 980px;width:80%; margin: 50px auto; display: flex; flex: 1">
+  <div style = "flex: 1; padding: 20px;">
+    It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+  </div>
+  <div class="zoomViewport" style = "flex: 2; padding: 20px; display: flex; height: 800px;">
+    <div class="zoomContainer">
+      <img id="mainbg" src="tumblr_p4s6cx0y2C1r1thfzo1_1280.jpg" usemap="#image-map" />
+      <img id="car1" src="./tumblr_p4s6cx0y2C1r1thfzo1_1280 - 1.png"/>
+      <img id="car2" src="./tumblr_p4s6cx0y2C1r1thfzo1_1280 - 2.png"/>
+      <img id="car3" src="./tumblr_p4s6cx0y2C1r1thfzo1_1280 - 3.png"/>
+      <div class="zoomTarget" id="zoomAvatar"></div>
+      <div id="tooltip" class="tooltip">
+        <p>some tooltip text</p>
+        <button>click here</button>
+      </div>
+      <map name="image-map">
+        <area onmouseover="showTooltip(this)" onmouseout="onMouseOut(this)" onclick="zoomThis()" alt="car1" title="car1" coords="129,183,175,139,193,155,149,196" shape="poly">
+        <area onmouseover="showTooltip(this)" onmouseout="onMouseOut(this)" onclick="zoomThis()" alt="car2" title="car2" coords="101,319,107,302,113,288,160,238,185,257,189,274,130,333,118,334" shape="poly">
+        <area onmouseover="showTooltip(this)" onmouseout="onMouseOut(this)" onclick="zoomThis()" alt="car3" title="car3" coords="197,357,211,333,214,325,260,276,286,296,285,313,225,373,213,371" shape="poly">
+      </map>
+    </div>
+  </div>  
+</div>
+
+ 
+  <script src="./main.js"></script>
+<script>
+
+</script>
+</body>
+</html>
